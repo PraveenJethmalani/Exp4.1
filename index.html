@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HTML FORM</title>
+<script src="app.js"></script>
+</head>
+<style>
+.content {
+display: flex;
+justify-content: space-between;
+padding: 1rem;
+}
+form h3 {
+font-size: 2rem;
+margin: 1rem;
+}
+input,
+select {
+margin-bottom: 1rem;
+}
+.btn {
+display: inline-block;
+margin-top: 1rem;
+font-size: 1.2rem;
+padding: 0.4rem 0.8rem;
+color: white;
+background: #333;
+border: none;
+border-radius: 7px;
+box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+cursor: pointer;
+transition: all 750ms ease-in-out;
+}
+.btn:hover {
+transform: scale(1.05);
+}
+.preview {
+display: flex;
+width: 400px;
+margin-right: 200px;
+background: #f4f4f4;
+justify-content: center;
+align-items: center;
+}
+.preview img {
+height: 80%;
+width: 80%;
+}
+@media (max-width: 1100px) {
+.content {
+margin-left: 3rem;
+}
+}
+@media (max-width: 880px) {
+body {
+margin: 0;
+}
+form h3 {
+text-align: center;
+}
+.content {
+flex-direction: column-reverse;
+align-items: center;
+justify-content: center;
+margin-left: 0;
+}
+.form-data {
+margin-top: 2rem;
+}
+.preview {
+height: 60%;
+width: 60%;
+margin: 3rem;
+}
+}
+</style>
+<body>
+<form action="" method="put" name="buyForm" id="buyForm" onsubmit="return validateForm()">
+<h3>T-shirt and sons</h3>
+<div class="content">
+<div class="form-data">
+<label for="tagline">Enter Tagline:</label>
+<input type="text" name="tagline" id="tagline" /> <br />
+<label for="color">Choose Color:</label>
+<select id="color" name="color">
+<option value="null" selected disabled hidden> -- </option>
+<option value="black">Black</option>
+<option value="red">Red</option>
+<option value="white">White</option>
+<option value="blue">Blue</option>
+</select>
+<br />
+<label for="size">Select Size:</label>
+<select id="size" name="size">
+<option value="null" selected disabled hidden> -- </option>
+<option value="s">S</option>
+<option value="m">M</option>
+<option value="l">L</option>
+<option value="xl">XL</option>
+</select>
+<br />
+<label for="quantity">Quantity: </label>
+<select id="quantity" name="quantity">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+</select>
+<br />
+<label for="date">Date:</label><br>
+<input type="date" id="date" name="date"><br><br>
+<label for="address"><b>Delivery address:</b></label>
+<p>Mumbai</p>
+<button type="submit" class="btn" name="submit" id="submit">Submit</button>
+</div>
+<div class="preview">
+<img src="tshirt.jpg" alt="" />
+</div>
+</div>
+</form>
+</body>
+</html>
+
